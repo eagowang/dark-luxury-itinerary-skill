@@ -1,29 +1,81 @@
 # Dark Luxury Editorial Web Skill
 
-This repository packages the current `dark-luxury-editorial-web` skill for reuse and GitHub distribution.
+A reusable Codex skill for turning travel briefs, route guides, and first-person travel notes into polished dark editorial microsites.
 
-## Contents
+This skill is tuned for the kind of travel pages that need:
+
+- a full-screen photographic Hero
+- the same cover reused as the blurred page background
+- a seamless Hero-to-second-screen transition
+- structured itinerary or memoir layouts
+- restrained place and food tags
+- mobile-first typography and motion
+- Pixabay-first media sourcing with explicit fallback rules
+- optional BGM workflow guidance
+
+## What This Skill Is For
+
+Use this skill when you want to build or refine:
+
+- travel route-guide websites
+- multi-day itinerary pages
+- first-person travel memoir pages
+- editorial lifestyle landing pages
+- dark luxury / Kinfolk-like microsites with photography-led composition
+
+It is especially useful when the input starts as raw travel text and needs to become a real interactive web page.
+
+## What Is Included
 
 - `dark-luxury-editorial-web-skill/`
-  The full skill source, including `SKILL.md`, `agents/`, and `references/`.
+  The full skill source.
+- `dark-luxury-editorial-web-skill/SKILL.md`
+  The core workflow and guardrails.
+- `dark-luxury-editorial-web-skill/references/`
+  Supporting references for benchmarking, itinerary planning, media sourcing, implementation recipes, and writing guidance.
 - `dist/dark-luxury-editorial-web-skill.skill`
-  Packaged installable artifact generated from the current skill source.
+  A packaged installable artifact.
 
-## Skill Focus
+## Key Capabilities
 
-This skill is for building and refining dark luxury editorial travel microsites, route-guide pages, and first-person travel memoir web experiences with:
+- Hero and next-screen continuity rules
+- mobile-first layout and optical centering guidance
+- route-guide and memoir content normalization
+- itinerary planning structure for cold-start travel requests
+- timeline and section design rules
+- concrete place / food tag rules
+- media sourcing workflow with fallback chain
+- font payload control guidance for Vite travel projects
+- audio direction and playback UX guidance
 
-- Hero and second-screen seamless image continuity
-- Refined place and food tagging rules
-- Mobile-first editorial layout and motion guidance
-- Pixabay-first media sourcing with explicit fallback rules
-- Audio workflow guidance
-- Cold-start route-guide generation and QA rules
+## Benchmark Family
 
-## Packaging
+The skill is calibrated against this design family:
 
-The `.skill` artifact in `dist/` was generated from the exported source with:
+- Xishuangbanna route guide: `https://dark-luxury-travel-itinerary.vercel.app`
+- Jingshan route guide: `https://wuhan-jingshan-travel-guide.vercel.app`
+- Jingshan memoir: `https://youji.travel-itinerary-jingshan.online`
 
-```bash
-python3 scripts/package_skill.py dark-luxury-editorial-web-skill ./dist
+## Install Artifact
+
+The packaged artifact is available at:
+
+- `dist/dark-luxury-editorial-web-skill.skill`
+
+## Repository Structure
+
+```text
+.
+├── dark-luxury-editorial-web-skill/
+│   ├── SKILL.md
+│   ├── agents/
+│   └── references/
+└── dist/
+    └── dark-luxury-editorial-web-skill.skill
 ```
+
+## Version
+
+This repository is being released with the initial public tag:
+
+- `v1.0.0`
