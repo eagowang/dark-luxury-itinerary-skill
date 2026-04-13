@@ -44,12 +44,7 @@ Cold-start outputs must feel like they belong to the same project family as thes
 - Jingshan route guide: `https://wuhan-jingshan-travel-guide.vercel.app`
 - Jingshan memoir: `https://youji.travel-itinerary-jingshan.online`
 
-Use their local implementations as the most reliable code-level baseline:
-
-- [`/Users/yusijua/Documents/travel/Dark Luxury Travel Itinerary/src/App.tsx`](/Users/yusijua/Documents/travel/Dark Luxury Travel Itinerary/src/App.tsx)
-- [`/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Hero.tsx`](/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Hero.tsx)
-- [`/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Itinerary.tsx`](/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Itinerary.tsx)
-- [`/Users/yusijua/Documents/travel/京山四天三夜游记/src/App.tsx`](/Users/yusijua/Documents/travel/京山四天三夜游记/src/App.tsx)
+If you have your own benchmark-family implementations in your workspace, inspect them as supporting references. If not, rely on the benchmark sites plus the bundled references in this skill.
 
 ## Default workflow
 

@@ -8,12 +8,9 @@ Use this reference when building a new travel website from 0 to 1 and you need t
 - Jingshan route guide: `https://wuhan-jingshan-travel-guide.vercel.app`
 - Jingshan memoir: `https://youji.travel-itinerary-jingshan.online`
 
-## Benchmark source files
+## Benchmark implementation note
 
-- [`/Users/yusijua/Documents/travel/Dark Luxury Travel Itinerary/src/App.tsx`](/Users/yusijua/Documents/travel/Dark Luxury Travel Itinerary/src/App.tsx)
-- [`/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Hero.tsx`](/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Hero.tsx)
-- [`/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Itinerary.tsx`](/Users/yusijua/Documents/travel/武汉 京山 四日游攻略 2/src/components/Itinerary.tsx)
-- [`/Users/yusijua/Documents/travel/京山四天三夜游记/src/App.tsx`](/Users/yusijua/Documents/travel/京山四天三夜游记/src/App.tsx)
+If you maintain your own benchmark-family codebase, use those local implementations as a supporting reference. This public skill package intentionally avoids embedding machine-specific local file paths.
 
 ## What these projects have in common
 

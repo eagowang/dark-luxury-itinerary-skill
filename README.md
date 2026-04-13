@@ -25,5 +25,5 @@ This skill is for building and refining dark luxury editorial travel microsites,
 The `.skill` artifact in `dist/` was generated from the exported source with:
 
 ```bash
-python3 /Users/yusijua/Desktop/skills/source/skill-creator/scripts/package_skill.py skill-github-export/dark-luxury-editorial-web-skill skill-github-export/dist
+python3 scripts/package_skill.py dark-luxury-editorial-web-skill ./dist
 ```
