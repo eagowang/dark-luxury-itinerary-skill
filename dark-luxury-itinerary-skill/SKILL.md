@@ -1,5 +1,5 @@
 ---
-name: dark-luxury-editorial-web
+name: dark-luxury-itinerary-skill
 description: Build or refine travel guides, 路书设计网页, editorial landing pages, and lifestyle microsites in a restrained dark luxury / Kinfolk-inspired aesthetic using React + Tailwind CSS. Use when the user asks for 高级、惊艳、克制、有呼吸感的暗黑杂志风页面，尤其是要把原始旅行攻略、行程路书、游记文本转成可交互网页、需要 Hero 与下一屏无缝过渡、优雅时间轴、地点/食物标签、低饱和 earth/forest 配色、内嵌 BGM、Pixabay 素材 sourcing / generation，或要把这套体系沉淀成 Cursor 规则 / SOP / skill 的场景。
 ---
 

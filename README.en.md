@@ -89,85 +89,43 @@ It is especially helpful for:
 
 ## How To Start
 
-The good news: in most setups, you do not need to start with the `.skill` package at all.
+No matter which app you use, the fastest setup is usually the same:
 
-If you just want the fastest path, wire these instructions into the agent you already use, then prompt it with something like:
+1. Open `dark-luxury-itinerary-skill/SKILL.md`
+2. Put the core instructions into your app’s project rules, system prompt, or custom agent
+3. Give it your travel brief and let it start generating
 
-> Build a two-day travel route-guide site from Wuhan to Xiangyang, mobile-first, with an editorial look, locally sourced images, and a gentle ambient BGM.
+For example:
 
-Here are the most practical ways to use it.
+> Build a two-day travel route-guide site from Wuhan to Xiangyang, mobile-first, with an editorial look, automatic image sourcing, and a gentle ambient BGM.
 
-### Cursor
+If your tool supports direct skill import, you can also use:
 
-If you use Cursor, the easiest path is usually not package installation. It is project-level rules.
-
-- Simple path: put the condensed instructions in `AGENTS.md` at the project root
-- Rules path: place them in `.cursor/rules/` as a reusable `.mdc` rule
-- CLI path: `cursor-agent` reads the same `.cursor/rules`, and also understands root-level `AGENTS.md` and `CLAUDE.md`
-
-So the same guidance can usually work in both Cursor IDE and Cursor CLI.
-
-### Claude Code
-
-Claude Code does not need a native skill installer to make this useful.
-
-- Simplest path: put the core instructions in your project `CLAUDE.md`
-- Better for repetition: create `.claude/commands/travel-web.md`, then call it with `/travel-web`
-- Better for teams: commit `CLAUDE.md` and `.claude/commands/` into the repo
-
-That way, you do not have to retype the whole prompt every time.
-
-### OpenCode
-
-OpenCode works especially well when this is turned into a dedicated agent.
-
-- create `.opencode/agents/travel-web.md`
-- place the core travel-web instructions there
-- call it in chat with `@travel-web`
-
-If you want the behavior to stay with the project, this is a very light setup.
-
-### OpenClaw
-
-OpenClaw is the closest to a native skill workflow.
-
-- copy `dark-luxury-editorial-web-skill/` into `<workspace>/skills/`
-- or place it in `~/.openclaw/skills/` for system-wide reuse
-- use `dist/dark-luxury-editorial-web-skill.skill` when you want a packaged artifact for sharing or backup
-
-For OpenClaw, the real source of truth is the skill folder itself. The `.skill` file is the packaged form.
-
-### If You Just Want To Copy Something And Go
-
-Start here:
-
-- `dark-luxury-editorial-web-skill/SKILL.md`
-
-You can treat it as the master prompt and adapt it into `AGENTS.md`, `CLAUDE.md`, `.cursor/rules/`, `.opencode/agents/`, or an OpenClaw `skills/` directory, depending on the app you use.
+- `dist/dark-luxury-itinerary-skill.skill`
 
 ## What’s In This Repository?
 
-- `dark-luxury-editorial-web-skill/`
+- `dark-luxury-itinerary-skill/`
   Full skill source
 
-- `dark-luxury-editorial-web-skill/SKILL.md`
+- `dark-luxury-itinerary-skill/SKILL.md`
   Core workflow, guardrails, visual system, and QA rules
 
-- `dark-luxury-editorial-web-skill/references/`
+- `dark-luxury-itinerary-skill/references/`
   Benchmarking, itinerary planning, writing guidance, implementation recipes, and media workflow references
 
-- `dist/dark-luxury-editorial-web-skill.skill`
+- `dist/dark-luxury-itinerary-skill.skill`
   Packaged installable artifact
 
 ## Common Ways To Use It
 
-1. Install the `.skill` artifact and use it directly for new travel-web projects
-2. Use `SKILL.md + references/` as your editable SOP baseline
-3. Use it to calibrate your own travel-web agent so it stops producing template-looking pages
+1. Import the `.skill` artifact directly
+2. Or use `SKILL.md + references/` as your reusable rule baseline
+3. Then give it a travel brief and let it generate
 
 ## Install Artifact
 
-- `dist/dark-luxury-editorial-web-skill.skill`
+- `dist/dark-luxury-itinerary-skill.skill`
 
 ## Repository Structure
 
@@ -175,12 +133,12 @@ You can treat it as the master prompt and adapt it into `AGENTS.md`, `CLAUDE.md`
 .
 ├── assets/
 │   └── screenshots/
-├── dark-luxury-editorial-web-skill/
+├── dark-luxury-itinerary-skill/
 │   ├── SKILL.md
 │   ├── agents/
 │   └── references/
 └── dist/
-    └── dark-luxury-editorial-web-skill.skill
+    └── dark-luxury-itinerary-skill.skill
 ```
 
 ## Current Version

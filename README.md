@@ -89,85 +89,43 @@
 
 ## 怎么开始
 
-好消息是，大多数时候你根本不需要先研究 `.skill` 包怎么装。
+不管你用哪个 App，最快的方式其实都差不多：
 
-如果你只是想最快开始，最简单的做法是：把这套规则接到你正在用的 agent 里，然后直接说一句像这样的话：
+1. 打开 `dark-luxury-itinerary-skill/SKILL.md`
+2. 把里面的核心说明放进你当前工具的项目规则、系统提示，或自定义 agent 里
+3. 直接输入你的旅行需求，让它开始生成
+
+比如你可以直接这样说：
 
 > 帮我做一个从武汉到襄阳的两天一夜旅行路书网页，移动端优先，保留高级杂志感，自动补图并配置一首舒缓的背景音乐。
 
-下面是几种最实用的接入方式。
+如果你的工具支持直接导入 skill 包，也可以直接使用：
 
-### Cursor
-
-如果你用的是 Cursor，最省事的方式其实不是装包，而是直接把规则放进项目里。
-
-- 简单版：把精简后的说明放进项目根目录 `AGENTS.md`
-- 规则版：放进 `.cursor/rules/`，做成一个可复用的 `.mdc` 规则
-- CLI 版：`cursor-agent` 会读取同一套 `.cursor/rules`，也会读取项目根的 `AGENTS.md` 和 `CLAUDE.md`
-
-换句话说，你在 Cursor IDE 里能用的那份规则，通常在 Cursor CLI 里也能继续用。
-
-### Claude Code
-
-Claude Code 不必等“原生 skill 安装”。
-
-- 最简单：把核心说明写进项目里的 `CLAUDE.md`
-- 更顺手：新建 `.claude/commands/travel-web.md`，之后在会话里直接输入 `/travel-web`
-- 如果你想团队共用，就把 `CLAUDE.md` 和 `.claude/commands/` 一起放进仓库
-
-这样你就不用每次都重复打一大段提示词了。
-
-### OpenCode
-
-OpenCode 更适合把这套能力做成一个专用 agent。
-
-- 在项目里创建 `.opencode/agents/travel-web.md`
-- 把这套旅行网页的核心 prompt 放进去
-- 在会话里用 `@travel-web` 直接调用
-
-如果你希望它跟着项目走，这种方式会非常轻。
-
-### OpenClaw
-
-OpenClaw 是最接近“原生 skill”这条路的。
-
-- 直接把 `dark-luxury-editorial-web-skill/` 复制到 `<workspace>/skills/`
-- 或者放到 `~/.openclaw/skills/`，让本机所有项目共享
-- 如果你只是想分发或备份，再使用 `dist/dark-luxury-editorial-web-skill.skill`
-
-也就是说，对 OpenClaw 来说，真正的“本体”是 skill 文件夹本身，`.skill` 更像打包产物。
-
-### 如果你只想复制就用
-
-那最直接的入口就是这个源文件：
-
-- `dark-luxury-editorial-web-skill/SKILL.md`
-
-你完全可以把它当作母版，按你正在使用的工具，拆进 `AGENTS.md`、`CLAUDE.md`、`.cursor/rules/`、`.opencode/agents/` 或 OpenClaw 的 `skills/` 目录里。
+- `dist/dark-luxury-itinerary-skill.skill`
 
 ## 仓库里有什么？
 
-- `dark-luxury-editorial-web-skill/`
+- `dark-luxury-itinerary-skill/`
   完整 skill 源目录
 
-- `dark-luxury-editorial-web-skill/SKILL.md`
+- `dark-luxury-itinerary-skill/SKILL.md`
   核心工作流、硬规则、视觉系统与 QA 规范
 
-- `dark-luxury-editorial-web-skill/references/`
+- `dark-luxury-itinerary-skill/references/`
   benchmark、行程规划、文风约束、实现配方、媒体素材工作流
 
-- `dist/dark-luxury-editorial-web-skill.skill`
+- `dist/dark-luxury-itinerary-skill.skill`
   打包好的可安装 `.skill` 文件
 
 ## 最常见的使用方式
 
-1. 直接安装 `.skill` 文件，用它跑新的旅行网页项目
-2. 把仓库里的 `SKILL.md + references/` 当作你自己的 SOP 基线
-3. 用它去校准你的 travel-web agent，让它别再把路书做成模板站
+1. 直接导入 `.skill` 文件
+2. 或者把 `SKILL.md + references/` 当作你自己的规则母版
+3. 然后直接给它旅行需求，让它开始生成
 
 ## 安装文件
 
-- `dist/dark-luxury-editorial-web-skill.skill`
+- `dist/dark-luxury-itinerary-skill.skill`
 
 ## 仓库结构
 
@@ -175,12 +133,12 @@ OpenClaw 是最接近“原生 skill”这条路的。
 .
 ├── assets/
 │   └── screenshots/
-├── dark-luxury-editorial-web-skill/
+├── dark-luxury-itinerary-skill/
 │   ├── SKILL.md
 │   ├── agents/
 │   └── references/
 └── dist/
-    └── dark-luxury-editorial-web-skill.skill
+    └── dark-luxury-itinerary-skill.skill
 ```
 
 ## 当前版本
